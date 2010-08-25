@@ -7,11 +7,14 @@ Product.class_eval do
   def do_create_variants(force = false)
     if (create_variants == "1" || force) && self.option_types.length > 0
       generate_variant_combinations.each_with_index do |option_values, index|
+        sku = option_values.map(&:sku).reject(&:blank?).join("-")
+        sku = index+1 if sku.blank?
+
         v = Variant.create({
             :product => self,
             :option_values => option_values,
             :is_master => false,
-            :sku => self.sku.blank? ? "#{self.name.to_url[0..3]}-#{index+1}" : "#{self.sku}-#{index+1}"
+            :sku => self.sku.blank? ? "#{self.name.to_url[0..3]}-#{sku}" : "#{self.sku}-#{sku}"
           })
         v
       end

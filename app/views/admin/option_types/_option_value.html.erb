@@ -6,5 +6,6 @@
     <%= f.text_field :amount, :value => signed_amount %>
     <%= t(:'number.currency.format.unit') %>
   </td>
+  <td><%= f.text_field :sku %></td>
   <td class="actions"><%= f.remove_link icon('delete') + ' ' + t("remove") %></td>
 </tr>

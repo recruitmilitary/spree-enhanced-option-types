@@ -18,11 +18,11 @@
   <tbody>
     <tr>
       <td rowspan="<%= height+1 %>" class="y-axis">
-        <%= y_option_type.presentation.split(//u).join("<br />") %>
+        <%== y_option_type.presentation.split(//u).join("<br />") %>
       </td>
       <td class="option top left">&nbsp;</td>
       <% x_option_type.option_values.each do |ov| %>
-        <td class="option top"><%= ov.presentation.split(//u)[0..4].join("<br />") %></td>
+        <td class="option top"><%== ov.presentation.split(//u)[0..4].join("<br />") %></td>
       <% end %>
     </tr>
 

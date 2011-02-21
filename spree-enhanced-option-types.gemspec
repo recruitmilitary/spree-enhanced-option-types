@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
   s.description = 'This extension enchances spree functionality when handling products with numerous and complex variants.'
   s.required_ruby_version = '>= 1.8.7'
 
-  s.author            = ['Marcin Raczkowski', 'Brian Quinn', 'Roman Smirnov']
+  s.authors            = ['Marcin Raczkowski', 'Brian Quinn', 'Roman Smirnov']
   # s.email             = 'david@loudthinking.com'
   s.homepage          = 'http://github.com/romul/spree-enhanced-option-types'
   # s.rubyforge_project = 'actionmailer'

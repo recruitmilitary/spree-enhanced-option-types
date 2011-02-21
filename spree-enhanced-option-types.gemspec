@@ -1,21 +1,22 @@
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_enhanced_option_types'
-  s.version     = '0.50.0'
-  s.summary     = 'Add gem summary here'
-  #s.description = 'Add (optional) gem description here'
+  s.version     = '0.30.0'
+  s.summary     = 'Enchances Spree functionality when handling products with numerous and complex variants.'
+  s.description = 'This extension enchances spree functionality when handling products with numerous and complex variants.'
   s.required_ruby_version = '>= 1.8.7'
 
-  # s.author            = 'David Heinemeier Hansson'
+  s.author            = ['Marcin Raczkowski', 'Brian Quinn', 'Roman Smirnov']
   # s.email             = 'david@loudthinking.com'
-  # s.homepage          = 'http://www.rubyonrails.org'
+  s.homepage          = 'http://github.com/romul/spree-enhanced-option-types'
   # s.rubyforge_project = 'actionmailer'
 
-  s.files        = Dir['CHANGELOG', 'README.md', 'LICENSE', 'lib/**/*', 'app/**/*']
+  s.files         = `git ls-files`.split("\n")
+  s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.require_path = 'lib'
   s.requirements << 'none'
 
   s.has_rdoc = true
 
-  s.add_dependency('spree_core', '>= 0.40.99')
+  s.add_dependency('spree_core', '>= 0.30.2')
 end

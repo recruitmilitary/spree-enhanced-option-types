@@ -14,6 +14,10 @@ module SpreeEnhancedOptionTypes
           Rails.env == "production" ? require(c) : load(c)
         end
 
+        if Spree::Config.instance
+          Spree::Config.set(:variants_partial => 'radio_sets')
+        end
+        
         Spree::BaseController.class_eval do
           helper VariantSelection
         end

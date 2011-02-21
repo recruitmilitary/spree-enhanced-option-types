@@ -1,8 +1,8 @@
-namespace :spree_enhance_option_types do
+namespace :spree_enhanced_option_types do
   desc "Copies all migrations and assets (NOTE: This will be obsolete with Rails 3.1)"
   task :install do
-    Rake::Task['spree_enhance_option_types:install:migrations'].invoke
-    Rake::Task['spree_enhance_option_types:install:assets'].invoke
+    Rake::Task['spree_enhanced_option_types:install:migrations'].invoke
+    Rake::Task['spree_enhanced_option_types:install:assets'].invoke
   end
 
   namespace :install do

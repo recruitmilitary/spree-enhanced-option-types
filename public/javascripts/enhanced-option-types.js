@@ -44,7 +44,7 @@ function variant_changed(variant_id) {
   var va = variant_attributes[variant_id];
   var new_price = va.price;
   if($('.price.update')[0]) {
-    new_price = $('.price.update').text().replace(/[\d,.-]+/, parseFloat(new_price).toFixed(2));
+    new_price = $('.price.update').text().replace(/[\d\s,.-]+/, parseFloat(new_price).toFixed(2));
     $('.price.update').text(new_price);
   }
   if($('span.on-hand')[0]) {

@@ -15,7 +15,7 @@ module SpreeEnhancedOptionTypes
         end
 
         if Spree::Config.instance
-          Spree::Config.set(:variants_partial => 'radio_sets')
+          Spree::Config.set(:variants_partial => 'selects')
         end
         
         Spree::BaseController.class_eval do

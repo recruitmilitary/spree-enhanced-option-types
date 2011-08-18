@@ -14,7 +14,7 @@
 
       select_options = options.reject { |o| o[3] }.map{|o|
         selected_attribute = " selected='selected'" if o[2]
-        %(<option value="#{html_escape(o[1].to_s)}"#{selected_attribute}#{disabled_attribute}>#{html_escape(o[0].to_s)}</option>)
+        %(<option value="#{html_escape(o[1].to_s)}"#{selected_attribute}>#{html_escape(o[0].to_s)}</option>)
       }
     %>
     <%= select_tag("option_values[#{@product.id}][#{option_type.id}]", select_options.join.html_safe, :class=>"option-type" ) %>

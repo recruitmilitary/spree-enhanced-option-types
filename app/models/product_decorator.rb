@@ -22,7 +22,7 @@ Product.class_eval do
   end
 
   def default_variant
-    variants.first
+    variants.order("id").first
   end
 
   def generate_variant_combinations(option_values = nil)
